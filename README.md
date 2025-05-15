@@ -4,7 +4,7 @@
 
 Este repositorio corresponde a la **primera entrega** del proyecto de reconocimiento utilizando redes neuronales. En esta etapa inicial, se desarrolla y entrena un modelo básico, se analizan sus resultados y se establecen las bases para futuras implementaciones y mejoras.
 
-> **Nota:** Este no es el trabajo final. El repositorio se irá ampliando con nuevas carpetas y notebooks para actividades posteriores (por ejemplo, `actividad2` para la implementación práctica, mejoras, pruebas adicionales, etc.).
+> **Nota:** Este no es el trabajo final. El repositorio se irá ampliando con nuevas carpetas y notebooks para actividades posteriores (por ejemplo, `actividad2`).
 
 ## Estructura Actual
 
@@ -53,7 +53,7 @@ El modelo de red neuronal desarrollado en esta primera actividad demuestra un de
 
 ## Próximos Pasos
 
-- Agregar nuevas carpetas y notebooks para la **Actividad 2** y siguientes, donde se implementarán mejoras, pruebas adicionales y aplicaciones prácticas del modelo.
+- Agregar nuevas carpetas y notebooks para la **Actividad 2** y siguientes, donde se implementarán otros modelos.
 - Documentar cada nueva etapa para mantener la trazabilidad y evolución del proyecto.
 
 ## Requisitos
