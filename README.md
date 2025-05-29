@@ -106,28 +106,6 @@ El modelo es una red neuronal secuencial con una capa de entrada, dos capas ocul
 ### Visualización de Resultados
 
 Se incluyen gráficas de precisión y pérdida durante el entrenamiento y validación, que muestran la evolución positiva y estable del modelo.
-
-import matplotlib.pyplot as plt
-
-plt.figure(figsize=(12,4))
-plt.subplot(1,2,1)
-plt.plot(history.history['accuracy'], label='Train Acc')
-plt.plot(history.history['val_accuracy'], label='Val Acc')
-plt.title('Precisión')
-plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.legend()
-
-plt.subplot(1,2,2)
-plt.plot(history.history['loss'], label='Train Loss')
-plt.plot(history.history['val_loss'], label='Val Loss')
-plt.title('Pérdida')
-plt.xlabel('Epoch')
-plt.ylabel('Loss')
-plt.legend()
-
-plt.show()
-
 ---
 
 ## 📊 Actividad 2 — Análisis con CNN y RNN
@@ -153,7 +131,7 @@ Se implementa una arquitectura **CNN** para el mismo problema de MNIST, obtenien
 
 - **Precisión en validación:** 98.66%
 - Gráficas de precisión por época
-- Comparación con resultados de la actividad 1
+- Comparación con resultados de la actividad 1 de ML
 
 ---
 
@@ -193,4 +171,3 @@ Jean Carlos Páez Ramírez
 ---
 
 > *El proyecto se encuentra en desarrollo continuo como parte del curso de Deep Learning y Redes Neuronales.*
-```
