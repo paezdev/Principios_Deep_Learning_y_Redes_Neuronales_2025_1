@@ -1,4 +1,3 @@
----
 # Reconocimiento con Redes Neuronales — Actividades 1 y 2
 
 ## Descripción
@@ -122,5 +121,3 @@ Jean Carlos Páez Ramírez
 
 > *El proyecto se encuentra en desarrollo continuo como parte del curso de Deep Learning y Redes Neuronales.*
 ```
-
----
