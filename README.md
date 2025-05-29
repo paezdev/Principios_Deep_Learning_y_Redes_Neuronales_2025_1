@@ -1,19 +1,46 @@
-# Reconocimiento con Redes Neuronales — Actividad 1
+---
+
+```markdown
+# Reconocimiento con Redes Neuronales — Actividades 1 y 2
 
 ## Descripción
 
-Este repositorio corresponde a la **primera entrega** del proyecto de reconocimiento utilizando redes neuronales. En esta etapa inicial, se desarrolla y entrena un modelo básico, se analizan sus resultados y se establecen las bases para futuras implementaciones y mejoras.
+Este repositorio corresponde al desarrollo progresivo de un proyecto de reconocimiento utilizando redes neuronales. Se documentan los experimentos y resultados de dos entregas principales:
 
-> **Nota:** Este no es el trabajo final. El repositorio se irá ampliando con nuevas carpetas y notebooks para actividades posteriores (por ejemplo, `actividad2`).
+- **Actividad 1:** Entrenamiento de un modelo básico (MLP) para clasificación de imágenes (MNIST).
+- **Actividad 2:** Análisis de dos casos prácticos aplicando redes **CNN** para imágenes y **RNN** para texto.
 
-## Estructura Actual
+> **Nota:** El repositorio continuará ampliándose con nuevas carpetas y notebooks conforme avancen las siguientes actividades del curso.
 
-- `paez_jean_reconocimiento_redes_neuronales(actividad1).ipynb`: Notebook principal de la primera actividad, donde se desarrolla el modelo, se entrena y se analizan los resultados.
-- `image.png`: Imágenes de referencia o visualizaciones generadas durante el entrenamiento.
+---
 
-## Proceso de Entrenamiento
+## 📁 Estructura del Proyecto
 
-El modelo fue entrenado durante 20 épocas, mostrando una mejora constante en las métricas de precisión (*accuracy*) y pérdida (*loss*) tanto en los datos de entrenamiento como de validación. Se utilizaron técnicas estándar de preprocesamiento y validación para asegurar la robustez del modelo.
+```
+.
+├── docs
+│   ├── actividad 1
+│   │   └── paez_jean_reconocimiento_redes_neuronales(actividad1).ipynb - Colab.pdf
+│   ├── actividad 2
+│       └── Paez_Jean_EA_CNN_RNN.ipynb - Colab.pdf
+├── src
+│   └── notebook
+│       ├── actividad 1
+│       |   └── paez_jean_reconocimiento_redes_neuronales(actividad1).ipynb
+│       ├── actividad 2
+│           └── Paez_Jean_EA_CNN_RNN.ipynb
+├── .gitignore
+└── README.md
+
+```
+
+---
+
+## ✅ Actividad 1 — Modelo MLP (MNIST)
+
+### Descripción
+
+Se desarrolla y entrena un modelo básico de red neuronal multicapa (MLP) para clasificar imágenes del dataset MNIST. Se analiza el desempeño en función de precisión y pérdida.
 
 ### Resultados Principales
 
@@ -22,55 +49,80 @@ El modelo fue entrenado durante 20 épocas, mostrando una mejora constante en la
 - **Pérdida final de entrenamiento:** ~0.05
 - **Pérdida final de validación:** ~0.05
 
-Las curvas de accuracy y loss muestran un aprendizaje estable y sin señales de sobreajuste, lo que indica que el modelo generaliza correctamente a datos no vistos.
+El modelo generaliza correctamente, sin señales de sobreajuste.
 
-## Conclusiones
+### Recomendaciones
 
-El modelo de red neuronal desarrollado en esta primera actividad demuestra un desempeño sobresaliente, alcanzando altos niveles de precisión y bajas pérdidas tanto en entrenamiento como en validación. La similitud entre las métricas de ambas fases indica que el modelo no presenta sobreajuste y es capaz de generalizar adecuadamente. Estos resultados validan la efectividad de la arquitectura y los hiperparámetros seleccionados para esta etapa inicial.
+- Evaluar con datos nuevos
+- Aplicar *early stopping*
+- Monitorear en producción
+- Implementar regularización si se amplía el dataset
 
-## Recomendaciones
+---
 
-1. **Evaluar con un conjunto de prueba independiente:**  
-   Probar el modelo con datos completamente nuevos para confirmar su capacidad de generalización.
+## 📊 Actividad 2 — Análisis con CNN y RNN
 
-2. **Implementar early stopping:**  
-   Utilizar esta técnica para optimizar el tiempo de entrenamiento y evitar épocas innecesarias.
+### Parte 1: RNN para Análisis de Sentimiento
 
-3. **Guardar y documentar el modelo:**  
-   Registrar la arquitectura y los hiperparámetros para facilitar futuras mejoras o reutilización.
+Se estudia un caso donde una empresa quiere clasificar comentarios de usuarios en positivos o negativos. Se propone usar una **RNN (LSTM o GRU)** como solución. Incluye:
 
-4. **Monitorear el desempeño en producción:**  
-   Supervisar el modelo si se implementa en un entorno real para detectar posibles degradaciones.
+- Diagrama de arquitectura en Draw.io
+- Identificación de desafíos técnicos
+- Soluciones aplicables con embeddings y redes bidireccionales
 
-5. **Explorar técnicas de regularización si se amplía el dataset:**  
-   Considerar dropout, regularización L1/L2 o aumento de datos si se observa sobreajuste en el futuro.
+### Parte 2: CNN para Clasificación MNIST
 
-6. **Analizar los errores:**  
-   Revisar los casos de fallo para identificar oportunidades de mejora.
+Se implementa una arquitectura **CNN** para el mismo problema de MNIST, obteniendo una mejora notable con respecto al modelo MLP.
 
-7. **Actualizar el modelo periódicamente:**  
-   Reentrenar el modelo si los datos cambian con el tiempo para mantener su precisión.
+- Capa convolucional + ReLU
+- Capa de pooling
+- Fully connected + Softmax
+- Diagrama arquitectónico hecho en Draw.io
 
-## Próximos Pasos
+### Resultados
 
-- Agregar nuevas carpetas y notebooks para la **Actividad 2** y siguientes, donde se implementarán otros modelos.
-- Documentar cada nueva etapa para mantener la trazabilidad y evolución del proyecto.
+- **Precisión en validación:** 98.66%
+- Gráficas de precisión por época
+- Comparación con resultados de la actividad 1
 
-## Requisitos
+---
+
+## 🧠 Conclusión Final y Recomendaciones
+
+CNN demostró ser más adecuada para imágenes, mientras que las RNN se ajustan mejor a datos secuenciales como texto. La selección correcta de arquitectura impacta directamente en el rendimiento.
+
+**Recomendaciones:**
+- Usar regularización y data augmentation en CNN
+- Probar con datasets como CIFAR-10 o Fashion-MNIST
+- Seguir documentando cada etapa en notebooks separados
+
+---
+
+## 🛠️ Requisitos
 
 - Python 3.x
 - TensorFlow / Keras
-- Numpy, Matplotlib, y otras librerías estándar de ciencia de datos
+- Numpy, Matplotlib, Scikit-learn
+- draw.io (para visualizar diagramas)
 
-## Ejecución
+---
+
+## ▶️ Ejecución
 
 1. Clona este repositorio.
-2. Abre el notebook `paez_jean_reconocimiento_redes_neuronales(actividad1).ipynb`.
-3. Ejecuta las celdas siguiendo el flujo del notebook.
+2. Accede a `actividad1/` o `actividad2/`.
+3. Abre y ejecuta los notebooks correspondientes.
 4. Analiza los resultados y gráficas generadas.
 
-## Autor
+---
 
-Jean Páez
+## 👤 Autor
+
+Jean Carlos Páez Ramírez
+
+---
+
+> *El proyecto se encuentra en desarrollo continuo como parte del curso de Deep Learning y Redes Neuronales.*
+```
 
 ---
