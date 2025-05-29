@@ -105,6 +105,7 @@ El modelo es una red neuronal secuencial con una capa de entrada, dos capas ocul
 
 ### Visualización de Resultados
 
+
 Se incluyen gráficas de precisión y pérdida durante el entrenamiento y validación, que muestran la evolución positiva y estable del modelo.
 ---
 
