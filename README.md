@@ -1,6 +1,4 @@
 ---
-
-```markdown
 # Reconocimiento con Redes Neuronales — Actividades 1 y 2
 
 ## Descripción
