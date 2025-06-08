@@ -1,11 +1,12 @@
-# Reconocimiento con Redes Neuronales — Actividades 1 y 2
+# Principios de Deep Learning y Redes Neuronales — Actividades 1, 2 y 3
 
 ## Descripción
 
-Este repositorio corresponde al desarrollo progresivo de un proyecto de reconocimiento utilizando redes neuronales. Se documentan los experimentos y resultados de dos entregas principales:
+Este repositorio corresponde al desarrollo progresivo de un proyecto de reconocimiento utilizando redes neuronales. Se documentan los experimentos y resultados de tres entregas principales:
 
 - **Actividad 1:** Detección de fraudes financieros con un modelo básico de red neuronal.
 - **Actividad 2:** Análisis de dos casos prácticos aplicando redes **CNN** para imágenes y **RNN** para texto.
+- **Actividad 3:** Implementación básica de una RNN para análisis de sentimiento de texto.
 
 > **Nota:** El repositorio continuará ampliándose con nuevas carpetas y notebooks conforme avancen las siguientes actividades del curso.
 
@@ -19,16 +20,19 @@ Este repositorio corresponde al desarrollo progresivo de un proyecto de reconoci
 │   ├── actividad 1
 │   │   └── paez_jean_reconocimiento_redes_neuronales(actividad1).ipynb - Colab.pdf
 │   ├── actividad 2
-│       └── Paez_Jean_EA_CNN_RNN.ipynb - Colab.pdf
+│   │   └── Paez_Jean_EA_CNN_RNN.ipynb - Colab.pdf
+│   ├── actividad 3
+│   │   └── Paez_JeanCarlos_Evidencia3_RNN.ipynb - Colab.pdf
 ├── src
 │   └── notebook
 │       ├── actividad 1
-│       |   └── paez_jean_reconocimiento_redes_neuronales(actividad1).ipynb
+│       │   └── paez_jean_reconocimiento_redes_neuronales(actividad1).ipynb
 │       ├── actividad 2
-│           └── Paez_Jean_EA_CNN_RNN.ipynb
+│       │   └── Paez_Jean_EA_CNN_RNN.ipynb
+│       ├── actividad 3
+│       │   └── Paez_JeanCarlos_Evidencia3_RNN.ipynb
 ├── .gitignore
 └── README.md
-
 ```
 
 ---
@@ -136,6 +140,44 @@ Se implementa una arquitectura **CNN** para el mismo problema de MNIST, obtenien
 
 ---
 
+## 📝 Actividad 3 — Implementación Básica de RNN para Análisis de Sentimiento
+
+### Descripción
+
+En esta actividad se implementa una red neuronal recurrente básica (RNN) utilizando TensorFlow/Keras, enfocada en el análisis de sentimiento de comentarios de productos. El objetivo es clasificar los comentarios en positivos o negativos, siguiendo los lineamientos de la evidencia de aprendizaje.
+
+El modelo construido incluye:
+- Una capa de embedding para la representación vectorial de las palabras.
+- Una capa SimpleRNN para el procesamiento secuencial de los datos.
+- Una capa densa final con activación sigmoide para la clasificación binaria.
+
+El conjunto de datos utilizado es reducido y simulado, lo que permite demostrar el funcionamiento general del modelo, aunque limita su capacidad de generalización.
+
+### Proceso de Entrenamiento
+
+- Preprocesamiento de los comentarios mediante tokenización y padding.
+- Definición de la arquitectura secuencial con las capas mencionadas.
+- Compilación del modelo con optimizador Adam y función de pérdida `binary_crossentropy`.
+- Entrenamiento durante 10 épocas.
+- Evaluación del modelo con nuevos comentarios no vistos.
+
+### Resultados
+
+- Precisión de entrenamiento alcanzó hasta 0.80 en la última época.
+- La función de pérdida disminuyó progresivamente, indicando aprendizaje.
+- Las predicciones para nuevos comentarios estuvieron cercanas a 0.5, reflejando la limitación del modelo por el tamaño del dataset y la presencia de frases nuevas.
+
+### Conclusiones y Recomendaciones
+
+- El modelo cumple con el objetivo académico de implementar y entender una RNN básica para análisis de sentimientos.
+- Para mejorar el rendimiento, se recomienda:
+  1. Ampliar el conjunto de datos con ejemplos reales y variados.
+  2. Explorar arquitecturas más avanzadas como LSTM o GRU.
+  3. Realizar un preprocesamiento más exhaustivo del texto (eliminación de stopwords, normalización, embeddings preentrenados).
+  4. Ajustar hiperparámetros y aumentar el número de épocas si se dispone de más datos.
+
+---
+
 ## 🧠 Conclusión Final y Recomendaciones
 
 CNN demostró ser más adecuada para imágenes, mientras que las RNN se ajustan mejor a datos secuenciales como texto. La selección correcta de arquitectura impacta directamente en el rendimiento.
@@ -144,6 +186,7 @@ CNN demostró ser más adecuada para imágenes, mientras que las RNN se ajustan 
 - Usar regularización y data augmentation en CNN
 - Probar con datasets como CIFAR-10 o Fashion-MNIST
 - Seguir documentando cada etapa en notebooks separados
+- Ampliar el dataset y mejorar el preprocesamiento en RNN
 
 ---
 
@@ -159,7 +202,7 @@ CNN demostró ser más adecuada para imágenes, mientras que las RNN se ajustan 
 ## ▶️ Ejecución
 
 1. Clona este repositorio.
-2. Accede a `actividad1/` o `actividad2/`.
+2. Accede a `actividad1/`, `actividad2/` o `actividad3/`.
 3. Abre y ejecuta los notebooks correspondientes.
 4. Analiza los resultados y gráficas generadas.
 
