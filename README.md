@@ -1,14 +1,13 @@
-# Principios de Deep Learning y Redes Neuronales — Actividades 1, 2 y 3
+# Principios de Deep Learning y Redes Neuronales — Actividades 1, 2, 3 y 4
 
 ## Descripción
 
-Este repositorio corresponde al desarrollo progresivo de un proyecto de reconocimiento utilizando redes neuronales. Se documentan los experimentos y resultados de tres entregas principales:
+Este repositorio corresponde al desarrollo progresivo de un proyecto de reconocimiento utilizando redes neuronales. Se documentan los experimentos y resultados de cuatro entregas principales:
 
 - **Actividad 1:** Detección de fraudes financieros con un modelo básico de red neuronal.
 - **Actividad 2:** Análisis de dos casos prácticos aplicando redes **CNN** para imágenes y **RNN** para texto.
 - **Actividad 3:** Implementación básica de una RNN para análisis de sentimiento de texto.
-
-> **Nota:** El repositorio continuará ampliándose con nuevas carpetas y notebooks conforme avancen las siguientes actividades del curso.
+- **Actividad 4:** Mejora de un modelo LSTM bidireccional con embeddings FastText, optimización de hiperparámetros con Keras Tuner, regularización y exportación para producción.
 
 ---
 
@@ -23,6 +22,9 @@ Este repositorio corresponde al desarrollo progresivo de un proyecto de reconoci
 │   │   └── Paez_Jean_EA_CNN_RNN.ipynb - Colab.pdf
 │   ├── actividad 3
 │   │   └── Paez_JeanCarlos_Evidencia3_RNN.ipynb - Colab.pdf
+│   ├── actividad 4
+│   │   └── páez_ramírez_jean_carlos_ consideraciones éticas y legales.pdf
+│   │   
 ├── src
 │   └── notebook
 │       ├── actividad 1
@@ -31,6 +33,9 @@ Este repositorio corresponde al desarrollo progresivo de un proyecto de reconoci
 │       │   └── Paez_Jean_EA_CNN_RNN.ipynb
 │       ├── actividad 3
 │       │   └── Paez_JeanCarlos_Evidencia3_RNN.ipynb
+│       └── actividad 4
+│           ├── Paez_Jean_EA4_Codigo.py
+│           └── modelo_mejorado_lstm_fasttext.keras
 ├── .gitignore
 └── README.md
 ```
@@ -178,15 +183,44 @@ El conjunto de datos utilizado es reducido y simulado, lo que permite demostrar 
 
 ---
 
-## 🧠 Conclusión Final y Recomendaciones
+## 🧠 Actividad 4 — Mejora de Modelo LSTM con FastText y Optimización
 
-CNN demostró ser más adecuada para imágenes, mientras que las RNN se ajustan mejor a datos secuenciales como texto. La selección correcta de arquitectura impacta directamente en el rendimiento.
+### Descripción
 
-**Recomendaciones:**
-- Usar regularización y data augmentation en CNN
-- Probar con datasets como CIFAR-10 o Fashion-MNIST
-- Seguir documentando cada etapa en notebooks separados
-- Ampliar el dataset y mejorar el preprocesamiento en RNN
+En esta actividad se mejora un modelo de análisis de sentimiento utilizando una red neuronal recurrente bidireccional (LSTM) con embeddings preentrenados FastText. Se optimizan hiperparámetros mediante Keras Tuner, se aplican técnicas de regularización como dropout y batch normalization, y se exporta el modelo para producción.
+
+Se incluyen análisis detallados de resultados, visualizaciones, pruebas con frases personalizadas y consideraciones éticas sobre transparencia, equidad y privacidad.
+
+### Implementación
+
+- Modelo bidireccional LSTM con embeddings FastText (300 dimensiones).
+- Optimización de hiperparámetros: tasa de aprendizaje, tamaño de lote, número de épocas, dropout, unidades LSTM, etc.
+- Regularización con dropout y batch normalization para evitar sobreajuste.
+- Uso de Keras Tuner para búsqueda automática de hiperparámetros.
+- Exportación del modelo entrenado para uso en producción.
+- Funciones para preprocesamiento, predicción personalizada y evaluación.
+
+### Resultados
+
+- Precisión en validación superior al 80%.
+- Buen balance entre precisión y recall, con análisis detallado de matriz de confusión.
+- Visualizaciones de curvas de aprendizaje y matriz de confusión.
+- Pruebas con frases personalizadas que muestran capacidad de clasificación en textos reales.
+- Identificación de limitaciones y recomendaciones para mejorar.
+
+### Consideraciones Éticas y Legales
+
+- **Transparencia:** Documentación clara del modelo, métricas y decisiones.
+- **Equidad:** Balanceo de clases y análisis para evitar sesgos.
+- **Privacidad:** Uso responsable de datos, anonimización y cumplimiento normativo.
+
+### Recomendaciones
+
+1. Aumento y diversificación de datos para mejorar la generalización.
+2. Ajuste fino de hiperparámetros y arquitectura para optimizar desempeño.
+3. Implementación de modelos ensemble para mayor robustez.
+4. Manejo de neutralidad y ambigüedad en texto para clasificaciones más precisas.
+5. Evaluación continua y monitoreo en producción para mantener efectividad.
 
 ---
 
@@ -195,15 +229,17 @@ CNN demostró ser más adecuada para imágenes, mientras que las RNN se ajustan 
 - Python 3.x
 - TensorFlow / Keras
 - Numpy, Matplotlib, Scikit-learn
-- draw.io (para visualizar diagramas)
+- Keras Tuner
+- FastText embeddings (archivo `cc.es.300.vec`)
+- draw.io (para diagramas)
 
 ---
 
 ## ▶️ Ejecución
 
 1. Clona este repositorio.
-2. Accede a `actividad1/`, `actividad2/` o `actividad3/`.
-3. Abre y ejecuta los notebooks correspondientes.
+2. Accede a la carpeta correspondiente a la actividad que deseas ejecutar (`actividad1/`, `actividad2/`, `actividad3/`, `actividad4/`).
+3. Abre y ejecuta los notebooks o scripts correspondientes.
 4. Analiza los resultados y gráficas generadas.
 
 ---
@@ -211,7 +247,3 @@ CNN demostró ser más adecuada para imágenes, mientras que las RNN se ajustan 
 ## 👤 Autor
 
 Jean Carlos Páez Ramírez
-
----
-
-> *El proyecto se encuentra en desarrollo continuo como parte del curso de Deep Learning y Redes Neuronales.*
