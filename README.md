@@ -27,7 +27,7 @@ Este repositorio corresponde al desarrollo progresivo de un proyecto de reconoci
 │   |         └── classification_report.txt
 │   |         ├── history.json
 │   |         └── modelo_mejorado_lstm_fasttext.keras
-│   |         └── páez_ramírez_jean_carlos_ implementación_final_red_neuronal.ipynb - Colab.pdf
+│   |         └── páez_ramírez_jean_carlos_ consideraciones éticas y legales.pdf
 │   |         └── tokenizer.pkl
 │   │
 |   |   
