@@ -23,8 +23,14 @@ Este repositorio corresponde al desarrollo progresivo de un proyecto de reconoci
 │   ├── actividad 3
 │   │   └── Paez_JeanCarlos_Evidencia3_RNN.ipynb - Colab.pdf
 │   ├── actividad 4
-│   │   └── páez_ramírez_jean_carlos_ consideraciones éticas y legales.pdf
-│   │   
+│   |         ├── best_model.keras
+│   |         └── classification_report.txt
+│   |         ├── history.json
+│   |         └── modelo_mejorado_lstm_fasttext.keras
+│   |         └── páez_ramírez_jean_carlos_ implementación_final_red_neuronal.ipynb - Colab.pdf
+│   |         └── tokenizer.pkl
+│   │
+|   |   
 ├── src
 │   └── notebook
 │       ├── actividad 1
@@ -34,8 +40,7 @@ Este repositorio corresponde al desarrollo progresivo de un proyecto de reconoci
 │       ├── actividad 3
 │       │   └── Paez_JeanCarlos_Evidencia3_RNN.ipynb
 │       └── actividad 4
-│           ├── Paez_Jean_EA4_Codigo.py
-│           └── modelo_mejorado_lstm_fasttext.keras
+│           └── páez_ramírez_jean_carlos__implementación_final_red_neuronal.ipynb
 ├── .gitignore
 └── README.md
 ```
